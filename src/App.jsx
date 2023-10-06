@@ -5,7 +5,7 @@ function App() {
   return (
     <div className="d-flex flex-column justify-content-center">
       <div>
-        <h3 className="text-center mt-2">Search Properties Near You</h3>
+        <h3 className="text-center mt-2">Properties Near You</h3><br />
       </div>
       <MyForm />
       <PropertyList />

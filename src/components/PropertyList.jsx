@@ -17,17 +17,19 @@ export default function PropertyList() {
   }, []);
 
   return (
-    <div className="container">
-      <div className="row">
-        {data.map((property) => (
-          <PropertyCard
-            key={property.id}
-            name={property.name}
-            type={property.type}
-            location={property.location}
-          />
-        ))}
-      </div>
+    <div classname="border border-primary m-4">
+      <div className="container">
+        <div className="row">
+          {data.map((property) => (
+            <PropertyCard
+              key={property.id}
+              name={property.name}
+              type={property.type}
+              location={property.location}
+            />
+          ))}
+        </div>
     </div>
+  </div>
   );
 }

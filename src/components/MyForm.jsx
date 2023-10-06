@@ -22,26 +22,26 @@ export default function MyForm() {
     console.log(searchParams);
   }
   return (
-    <div className="w-50">
-      {check && <Alert variant="warning">enter a search field</Alert>}
-      <Form onSubmit={handleSubmit}>
-        <Row className="d-flex flex-column align-items-end">
-          <Form.Group>
-            <Form.Control
-              type="text"
-              name="search"
-              placeholder="enter search field"
-              defaultValue={!searchParams.get('q') ? '' : searchParams.get('q')}
-              onChange={(e) => setSearchParams({ q: e.target.value })}
-            />
-          </Form.Group>
-          <Form.Group>
-            <Button type="submit" variant="dark">
-              search
-            </Button>
-          </Form.Group>
-        </Row>
-      </Form>
-    </div>
+      <div className="w-50 mx-auto">
+        {check && <Alert variant="warning">enter a search field</Alert>}
+        <Form onSubmit={handleSubmit}>
+          <Row className="d-flex flex-column align-items-end">
+            <Form.Group>
+              <Form.Control
+                type="text"
+                name="search"
+                placeholder="enter search field"
+                defaultValue={!searchParams.get('q') ? '' : searchParams.get('q')}
+                onChange={(e) => setSearchParams({ q: e.target.value })}
+              />
+            </Form.Group>
+            <Form.Group className="text-center">
+              <Button type="submit" variant="dark">
+                search
+              </Button>
+            </Form.Group>
+          </Row>
+        </Form>
+      </div>
   );
 }
